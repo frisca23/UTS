@@ -1,0 +1,962 @@
+body {
+    background-color: #36454F; /* Dark Blue/Charcoal Background */
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-content {
+    /* Main content sekarang mengambil 100% lebar karena sidebar dihapus */
+    padding: 2rem !important;
+    min-height: 100vh;
+}
+
+/* Card Utama (Hero Card) */
+.hero-card {
+    background-color: #5BC0DE; /* Cyan/Teal dari gambar asli */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-img {
+    max-height: 150px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
+}
+
+.stats-badge .badge-item {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Custom Card Biasa */
+.custom-card {
+    background: rgba(255, 240, 250, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.15);
+}
+
+/* Bar Chart Styling */
+.chart-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.chart-container .bar {
+    width: 15%;
+    background-color: #E0E0E0; /* Light Gray for inactive bars */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.chart-container .bar.active {
+    background-color: #00BCD4; /* Teal/Cyan for active bar */
+    box-shadow: 0 2px 10px rgba(0, 188, 212, 0.4);
+}
+
+/* Peach/Orange Card */
+.bg-peach {
+    background: rgba(255, 200, 221, 0.9) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #333 !important;
+}
+
+/* Circular Chart (Win Rate) Styling */
+.circular-chart {
+    display: block;
+    max-width: 80px;
+    max-height: 80px;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #e7e7e7;
+    stroke-width: 3.8;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    transition: all 0.5s ease-out;
+}
+
+.circular-chart.orange .circle {
+    stroke: #FF7043; /* Orange color */
+}
+
+.text-orange {
+    color: #FF7043 !important;
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+/* Pastikan body menggunakan warna latar belakang pink dan putih gradient */
+body {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFE5EC 35%, #FFC0D9 65%, #FFFFFF 100%);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+h2.text-uppercase {
+    color: #222 !important; /* Warna teks gelap untuk judul utama */
+    letter-spacing: 2px; /* Memberi sedikit jarak antar huruf */
+}
+
+/* Styling untuk heading HOBI SAYA */
+.hobi-heading {
+    background: linear-gradient(135deg, #FF69B4 0%, #FF1493 50%, #C71585 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    filter: drop-shadow(0 4px 8px rgba(255, 105, 180, 0.3));
+    position: relative;
+    margin-bottom: 3rem !important;
+    animation: fadeInScale 0.8s ease-out;
+}
+
+.hobi-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #FF69B4, transparent);
+    border-radius: 2px;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Styling untuk nama Frisca Putri Cahyani */
+.profile-name {
+    background: linear-gradient(135deg, #FF1493 0%, #FF69B4 25%, #C71585 50%, #FF1493 75%, #FF69B4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    position: relative;
+    text-shadow: 0 2px 20px rgba(255, 20, 147, 0.2);
+    filter: drop-shadow(0 4px 15px rgba(255, 105, 180, 0.25));
+}
+
+.profile-name::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, transparent, rgba(255, 105, 180, 0.1), transparent);
+    pointer-events: none;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Hero Section Styling */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.hero-background {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile Image Container - foto di tengah */
+.profile-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.profile-image-wrapper {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #FF1493, #FF69B4, #C71585, #FFB6D9);
+    background-size: 300% 300%;
+    animation: borderGradient 4s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+}
+
+.profile-image-wrapper .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    background: white;
+}
+
+/* Floating Text Styling */
+.floating-text {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-text p {
+    margin: 0;
+    font-style: italic;
+}
+
+/* Text positioning */
+.text-top-left {
+    top: 20px;
+    left: 40px;
+    font-size: 1.1rem;
+}
+
+.text-top-right {
+    top: 30px;
+    right: 50px;
+    font-size: 1.1rem;
+}
+
+.text-bottom-left {
+    bottom: 40px;
+    left: 50px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.text-bottom-right {
+    bottom: 30px;
+    right: 40px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Big background text */
+.big-background-text {
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255, 105, 180, 0.15);
+    white-space: nowrap;
+    z-index: 1;
+    letter-spacing: 10px;
+}
+
+.text-left-bg {
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.text-right-bg {
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Profile info section di bawah */
+.profile-info-section {
+    position: relative;
+    z-index: 10;
+    margin-top: 3rem;
+}
+
+.profile-info-section .profile-name {
+    font-size: 2.5rem;
+}
+
+.profile-info-section .profile-description {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+@keyframes borderGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Profile Subtitle */
+.profile-subtitle {
+    background: linear-gradient(135deg, #FF69B4, #C71585);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* Profile Description */
+.profile-description {
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #555 !important;
+}
+
+/* Custom Button */
+.btn-custom {
+    background: linear-gradient(135deg, #FF1493, #FF69B4);
+    color: white;
+    font-weight: 600;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(255, 20, 147, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+    color: white;
+}
+
+h2.text-white {
+    color: #222 !important;
+}
+
+h5.text-white {
+    color: #222 !important;
+}
+
+.text-white {
+    color: #222 !important;
+}
+
+/* Row untuk item populer */
+.popular-items-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+/* Styling untuk setiap card item (hobi) */
+.item-card.hobby-card {
+    width: 250px; /* Lebar default item hobi */
+    min-width: 220px;
+    background: rgba(255, 245, 250, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.2);
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    text-align: center;
+}
+
+/* Styling untuk gambar di dalam card */
+.item-image {
+    width: 100%;
+    height: 180px; /* Tinggi gambar agar tidak terlalu besar */
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.item-image::before {
+    content: none; /* Menghilangkan gradient overlay pada gambar */
+}
+
+.item-card.hobby-card:hover {
+    transform: translateY(-5px); /* Sedikit naik saat hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.item-card:hover .item-image {
+    transform: scale(1.03); /* Efek zoom saat hover */
+}
+
+/* Detail teks di bawah gambar */
+.item-details {
+    padding: 15px;
+    background: transparent;
+    border-radius: 0 0 20px 20px;
+    flex-grow: 1;
+    color: #333; /* Warna teks gelap untuk contrast dengan background putih */
+}
+
+.item-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222; /* Judul lebih gelap */
+}
+
+.item-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    color: #555; /* Warna teks deskripsi lebih gelap */
+}
+
+/* Styling untuk item yang lebih besar di tengah */
+.item-card.large-card.hobby-card {
+    width: 280px; /* Lebar yang sedikit lebih besar */
+    min-width: 250px;
+    transform: scale(1.08); /* Sedikit diperbesar dari yang lain */
+    z-index: 10;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 15px 50px rgba(255, 105, 180, 0.25);
+    background: rgba(255, 240, 250, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.item-card.large-card.hobby-card .item-image {
+    height: 220px; /* Tinggi gambar yang sedikit lebih besar */
+}
+
+/* Portfolio Section Styling */
+.hobby-portfolio {
+    background: rgba(255, 240, 250, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(255, 105, 180, 0.15);
+    transition: all 0.3s ease;
+}
+
+.hobby-portfolio:hover {
+    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.25);
+    transform: translateY(-5px);
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.portfolio-item.portfolio-reverse .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+}
+
+.portfolio-item.portfolio-reverse .portfolio-left {
+    order: 2;
+}
+
+.portfolio-item.portfolio-reverse .portfolio-right {
+    order: 1;
+}
+
+.portfolio-left,
+.portfolio-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-title {
+    background: linear-gradient(135deg, #FF1493 0%, #FF69B4 50%, #C71585 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.portfolio-text {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.portfolio-highlights {
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.05), rgba(255, 105, 180, 0.05));
+    border-left: 4px solid #FF1493;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.portfolio-highlights h5 {
+    color: #FF1493;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.portfolio-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-highlights ul li {
+    color: #333;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.portfolio-highlights ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #FF69B4;
+    font-weight: bold;
+}
+
+.portfolio-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hobby-portfolio:hover .portfolio-image {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .portfolio-item.portfolio-reverse .portfolio-left {
+        order: 1;
+    }
+    
+    .portfolio-item.portfolio-reverse .portfolio-right {
+        order: 2;
+    }
+    
+    .hobby-portfolio {
+        padding: 25px;
+    }
+    
+    .portfolio-title {
+        font-size: 1.5rem;
+    }
+    
+    .portfolio-image {
+        height: 250px;
+    }
+}
+
+/* Pastikan Anda memiliki CSS ini di styles.css */
+.item-image {
+    width: 100%;
+    /* Nilai ini sangat penting agar background-image bisa terlihat */
+    height: 180px; 
+    
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+    /* ... properti CSS lainnya ... */
+}
+
+/* Portfolio Showcase Section */
+.portfolio-showcase {
+    margin-top: 4rem;
+}
+
+.showcase-title {
+    background: linear-gradient(135deg, #FF1493 0%, #FF69B4 50%, #C71585 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+/* Showcase Grid Layout */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 2rem;
+}
+
+.showcase-item {
+    background: rgba(255, 240, 250, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(255, 105, 180, 0.15);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.25);
+}
+
+.item-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Image Grid Small */
+.image-grid-small {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.image-grid-small img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.image-grid-small img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+}
+
+.item-text {
+    text-align: center;
+}
+
+.item-text h5 {
+    color: #FF1493;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.item-text p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Chart Section */
+.chart-section {
+    margin-bottom: 20px;
+}
+
+.chart-section h5 {
+    color: #FF1493;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.mini-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.chart-bar {
+    flex: 1;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.chart-bar:hover {
+    opacity: 0.8;
+    transform: scaleY(1.1);
+}
+
+.description-text small {
+    color: #FF1493;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.description-text p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 5px 0 0 0;
+}
+
+/* Large Image Section */
+.large-image-section {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.large-image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.showcase-item:hover .large-image-section img {
+    transform: scale(1.05);
+}
+
+.overlay-text {
+    text-align: center;
+}
+
+.overlay-text h5 {
+    color: #FF1493;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.overlay-text p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Spotify Section Styling */
+.spotify-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    gap: 15px;
+}
+
+.spotify-section h6 {
+    color: #FF1493;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.spotify-logo-container {
+    font-size: 4rem;
+    color: #1DB954;
+    transition: all 0.3s ease;
+    animation: spotifyPulse 2s ease-in-out infinite;
+}
+
+.showcase-item:hover .spotify-logo-container {
+    transform: scale(1.15);
+}
+
+@keyframes spotifyPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.spotify-text {
+    color: #666;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.spotify-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(29, 185, 84, 0.3);
+    font-size: 0.95rem;
+}
+
+.spotify-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(29, 185, 84, 0.5);
+    color: white;
+    text-decoration: none;
+}
+
+.spotify-btn i {
+    font-size: 1.2rem;
+}
+
+.music-genres {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.genre-tag {
+    background: rgba(29, 185, 84, 0.1);
+    color: #1DB954;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(29, 185, 84, 0.3);
+    transition: all 0.3s ease;
+}
+
+.genre-tag:hover {
+    background: rgba(29, 185, 84, 0.2);
+    border-color: #1DB954;
+    transform: scale(1.05);
+}
+
+/* Quote Section */
+.quote-section {
+    text-align: center;
+}
+
+.quote-section h5 {
+    color: #FF1493;
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.quote-details p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.signature {
+    color: #FF69B4 !important;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .showcase-item {
+        min-height: 300px;
+        padding: 20px;
+    }
+    
+    .showcase-title {
+        font-size: 2rem;
+    }
+    
+    .text-grid {
+        grid-template-columns: 1fr;
+    }
+}
