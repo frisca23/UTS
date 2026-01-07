@@ -3,6 +3,52 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* Navbar Styling */
+.custom-navbar {
+    background: linear-gradient(135deg, #E91E63 0%, #FF1493 100%);
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 1.5rem;
+    color: white !important;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.custom-navbar .navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.custom-navbar .navbar-brand i {
+    margin-right: 0.5rem;
+}
+
+.custom-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.custom-navbar .nav-link:hover {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-navbar .nav-link.active {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid white;
+}
+
 .main-content {
     /* Main content sekarang mengambil 100% lebar karena sidebar dihapus */
     padding: 2rem !important;
@@ -958,5 +1004,327 @@ h5.text-white {
     
     .text-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* QR Code Section Styling */
+.qr-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+}
+
+.qr-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.qr-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.qr-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.qr-header i {
+    font-size: 2.5rem;
+    color: #00bcd4;
+    transition: all 0.3s ease;
+}
+
+.qr-card:hover .qr-header i {
+    color: #00d9ff;
+    transform: scale(1.1);
+}
+
+.qr-header h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.qr-code-container {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.qr-code-img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.qr-card:hover .qr-code-img {
+    transform: scale(1.05);
+}
+
+.qr-description {
+    color: #b0bec5;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+.qr-link-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.qr-link-btn:hover {
+    background: linear-gradient(135deg, #00d9ff 0%, #0097a7 100%);
+    transform: scale(1.05);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+}
+
+.qr-link-btn i {
+    margin-right: 0.5rem;
+}
+
+/* Mobile Responsiveness for QR Section */
+@media (max-width: 768px) {
+    .qr-section {
+        padding: 2rem 1rem;
+    }
+
+    .qr-card {
+        padding: 1.5rem;
+    }
+
+    .qr-code-container {
+        padding: 0.8rem;
+    }
+
+    .qr-code-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .qr-header i {
+        font-size: 2rem;
+    }
+
+    .qr-header h5 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Hobby Individual Page Styling */
+.hobby-page {
+    color: white;
+}
+
+.hobby-page h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #E91E63, #FF1493);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hobby-page h3 {
+    color: #E91E63;
+    font-weight: 600;
+}
+
+.hobby-page h4 {
+    color: #FF1493;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hobby-page h5 {
+    color: #E91E63;
+    font-weight: 600;
+}
+
+.hobby-page p {
+    color: #333333;
+    line-height: 1.8;
+    font-weight: 500;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: #444444;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+}
+
+.skill-list li strong {
+    color: #E91E63;
+    font-weight: 700;
+}
+
+.skill-list li:last-child {
+    border-bottom: none;
+}
+
+.skill-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #E91E63;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.gallery-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.4);
+}
+
+.row.g-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    max-width: 800px;
+    margin: 0 auto !important;
+}
+
+.row.g-0 > [class*="col-"] {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.gallery-placeholder {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.2), rgba(255, 20, 147, 0.2));
+    border: 2px dashed #E91E63;
+    border-radius: 10px;
+    padding: 3rem;
+    text-align: center;
+    color: #B0BEC5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.gallery-placeholder i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #E91E63;
+}
+
+.gallery-placeholder-tall {
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.2), rgba(255, 20, 147, 0.2));
+    border: 2px dashed #E91E63;
+    padding: 0;
+    text-align: center;
+    color: #B0BEC5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.gallery-placeholder-tall i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #E91E63;
+}
+
+.gallery-placeholder-tall p {
+    color: #B0BEC5;
+    margin: 0;
+}
+
+.spotify-card {
+    background: linear-gradient(135deg, rgba(29, 185, 84, 0.1), rgba(233, 30, 99, 0.1));
+    border: 2px solid rgba(29, 185, 84, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.spotify-card h5 {
+    color: white;
+    margin-top: 1rem;
+}
+
+.spotify-card p {
+    color: #b0bec5;
+}
+
+.spotify-btn-large {
+    display: inline-block;
+    background: linear-gradient(135deg, #1DB954 0%, #1ed760 100%);
+    color: white;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 25px rgba(29, 185, 84, 0.4);
+}
+
+.spotify-btn-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(29, 185, 84, 0.6);
+    color: white;
+}
+
+.spotify-btn-large i {
+    margin-right: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .hobby-page h1 {
+        font-size: 1.8rem;
+    }
+
+    .hobby-page {
+        padding: 1rem;
+    }
+
+    .skill-list li {
+        font-size: 0.95rem;
     }
 }
